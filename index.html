@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="Harlanlu's Blog 博客" />
+    <meta http-equiv="x-pjax-version" content="v123">
+  <link rel="shortcut icon" href="https://harlanlu.gitee.io/static/img/cherry.png">
+    <title>Harlanlu's Blog</title>
+</head>
+
+
+<body>
+    <div id="content">
+        <iframe id="iframe"
+        name="iframe"
+        height="100%"
+        width="100%"
+        src="https://www.cnblogs.com/harlanlu/"
+        scrolling="auto"
+        frameborder="0"
+        onload="changeFrameHeight()">
+</iframe>
+<script>
+    function changeFrameHeight() {
+        var iframe = document.getElementById("iframe");
+        iframe.height = document.documentElement.clientHeight;
+    }
+    //onresize属性可以用来获取或设置当前窗口的resize事件的事件处理函数
+    //onresize事件会在窗口或框架被调整大小时发生
+    window.onresize = function() {
+        changeFrameHeight();
+    }
+</script>
+
+    </div>
+</body>
+</html>
